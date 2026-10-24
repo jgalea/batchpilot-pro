@@ -101,6 +101,7 @@ final class WooOrderDeleteOperation implements OperationInterface {
 			'params'     => $params,
 			'sample_ids' => $sample_ids,
 			'count'      => $count,
+			'user_id'    => \get_current_user_id(),
 		];
 
 		$token = $this->token_generator->generate( $payload );
